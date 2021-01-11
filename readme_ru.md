@@ -2,6 +2,8 @@
 
 Java версия mp3 кодека Lame.
 
+http://dmilvdv.narod.ru/Apps/mp3_codec.html
+
 ## Соответствие
 
 - `Lame-3.100`
