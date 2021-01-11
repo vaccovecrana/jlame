@@ -682,7 +682,7 @@ final class Jquantize_pvt {
       }
     }
     if (cod_info.block_type != Jencoder.SHORT_TYPE) {
-        /* NORM, START or STOP type, but not SHORT */
+      /* NORM, START or STOP type, but not SHORT */
       max_nonzero |= 1; /* only odd numbers */
     } else {
       max_nonzero /= 6; /* 3 short blocks */
@@ -695,7 +695,7 @@ final class Jquantize_pvt {
       final int sfb_s = (cfg.samplerate <= 8000) ? 9 : 12;
       int limit; // = 575;
       if (cod_info.block_type != Jencoder.SHORT_TYPE) {
-          /* NORM, START or STOP type, but not SHORT */
+        /* NORM, START or STOP type, but not SHORT */
         limit = gfc.scalefac_band.l[sfb_l] - 1;
       } else {
         limit = 3 * gfc.scalefac_band.s[sfb_s] - 1;
@@ -906,7 +906,7 @@ final class Jquantize_pvt {
                         (distort_ >= 1E-20f
                             ? distort_
                             : 1E-20f)); // Jutil.FAST_LOG10( (distort_ >= 1E-20f ? distort_ :
-                                        // 1E-20f) );
+        // 1E-20f) );
 
         if (prev_noise != null) {
           /* save noise values */

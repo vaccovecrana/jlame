@@ -803,7 +803,7 @@ public final class Jlame {
       if (gfp.highpasswidth >= 0) {
         cfg.highpass2 = 2.f * (cfg.highpassfreq + gfp.highpasswidth);
       } else {
-          /* 0% above on default */
+        /* 0% above on default */
         cfg.highpass2 = (1 + 0.00f) * 2.f * cfg.highpassfreq;
       }
 
@@ -824,7 +824,7 @@ public final class Jlame {
           cfg.lowpass1 = 0;
         }
       } else {
-          /* 0% below on default */
+        /* 0% below on default */
         cfg.lowpass1 = (1 - 0.00f) * 2.f * cfg.lowpassfreq;
       }
       cfg.lowpass1 /= cfg.samplerate;
@@ -997,7 +997,7 @@ public final class Jlame {
     gfc.sv_qnt.mask_adjust_short = gfp.maskingadjust_short;
 
     if (cfg.vbr != vbr_off) {
-        /* choose a min/max bitrate for VBR */
+      /* choose a min/max bitrate for VBR */
       /* if the user didn't specify VBR_max_bitrate: */
       cfg.vbr_min_bitrate_index = 1; /* default: allow   8 kbps (MPEG-2) or  32 kbps (MPEG-1) */
       cfg.vbr_max_bitrate_index = 14; /* default: allow 160 kbps (MPEG-2) or 320 kbps (MPEG-1) */
@@ -1488,8 +1488,8 @@ public final class Jlame {
             bri++;
           }
           for (int i = 0; i < nsamples; i++) {
-            final float xl = (float) bl[bli];
-            final float xr = (float) br[bri];
+            final float xl = bl[bli];
+            final float xr = br[bri];
             final float u = xl * k[0][0] + xr * k[0][1];
             final float v = xl * k[1][0] + xr * k[1][1];
             ib0[i] = u;
@@ -1967,9 +1967,9 @@ public final class Jlame {
       offset += imp3;
       mp3count += imp3;
       {
-          /* even a single pcm sample can produce several frames!
-           * for example: 1 Hz input file resampled to 8 kHz mpeg2.5
-           */
+        /* even a single pcm sample can produce several frames!
+         * for example: 1 Hz input file resampled to 8 kHz mpeg2.5
+         */
         final int new_frames = gfc.ov_enc.frame_number - frame_num;
         if (new_frames > 0) {
           frames_left -= new_frames;

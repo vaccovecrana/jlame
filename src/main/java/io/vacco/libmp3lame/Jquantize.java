@@ -88,7 +88,7 @@ class Jquantize {
     final float[] xr = cod_info.xr;
 
     if (cod_info.block_type != Jencoder.SHORT_TYPE) {
-        /* NORM, START or STOP type, but not SHORT blocks */
+      /* NORM, START or STOP type, but not SHORT blocks */
       final float longfact_21 = gfc.sv_qnt.longfact[21]; // java
       final boolean is_more = longfact_21 > 1e-12f; // java
       final int[] psfb21 = gfc.scalefac_band.psfb21; // java

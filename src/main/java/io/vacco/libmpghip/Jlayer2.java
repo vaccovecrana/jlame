@@ -182,7 +182,7 @@ final class Jlayer2 {
         scfsi[i][1] = b1;
       }
     } else {
-        /* mono */
+      /* mono */
       for (int i = 0; i < sblimit; ++i) {
         final short step = fr_alloc[alloc1].bits;
         final byte b0 = mp.get_leq_8_bits(step);

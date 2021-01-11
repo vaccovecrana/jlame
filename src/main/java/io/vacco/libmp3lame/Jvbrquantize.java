@@ -383,7 +383,7 @@ final class Jvbrquantize {
         final boolean bad =
             tri_calc_sfb_noise_x34(xr, xroffset, xr34, xr34offset, l3_xmin, bw, sf, did_it);
         if (bad) {
-            /* distortion.  try a smaller scalefactor */
+          /* distortion.  try a smaller scalefactor */
           sf -= delsf;
         } else {
           sf_ok = sf;
@@ -454,7 +454,7 @@ final class Jvbrquantize {
       }
       int m2;
       if (sfb < psymax && w > 2) {
-          /* mpeg2.5 at 8 kHz doesn't use all scalefactors, unused have width 2 */
+        /* mpeg2.5 at 8 kHz doesn't use all scalefactors, unused have width 2 */
         if (energy_above_cutoff[sfb]) {
           // m2 = that.find( xr, j, xr34_orig, j, l3_xmin[sfb], l, m1 );
           if (that.find == guess_scalefac_x34) {
@@ -462,9 +462,8 @@ final class Jvbrquantize {
           } else if (that.find == find_scalefac_x34) {
             m2 = find_scalefac_x34(xr, j, xr34_orig, j, l3_xmin[sfb], l, m1);
           } else {
-            m2 =
-                0; // java: to suppress warning "The local variable m2 may not have been
-                   // initialized"
+            m2 = 0; // java: to suppress warning "The local variable m2 may not have been
+            // initialized"
           }
           /* #if 0
           					if( 0 ) {
@@ -630,7 +629,7 @@ final class Jvbrquantize {
       /* see if we should use subblock gain */
       int sfb = i;
       for (; sfb < psydiv; sfb += 3) {
-          /* part 1 */
+        /* part 1 */
         final int v = -sf[sfb];
         if (maxsf1 < v) {
           maxsf1 = v;
@@ -640,7 +639,7 @@ final class Jvbrquantize {
         }
       }
       for (; sfb < Jencoder.SFBMAX; sfb += 3) {
-          /* part 2 */
+        /* part 2 */
         final int v = -sf[sfb];
         if (maxsf2 < v) {
           maxsf2 = v;

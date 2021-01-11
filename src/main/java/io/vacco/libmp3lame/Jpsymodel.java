@@ -320,7 +320,7 @@ final class Jpsymodel {
       ratio = m1 / m2;
     }
     if ((b >= 0 ? b : -b) <= delta) {
-        /* approximately, 1 bark = 3 partitions */
+      /* approximately, 1 bark = 3 partitions */
       /* originally 'if(i > 8)' */
       if (ratio >= ma_max_i1) {
         return m1 + m2;
@@ -705,7 +705,7 @@ final class Jpsymodel {
       final float fftenergy[ /*HBLKSIZE*/]) {
     final JPsyStateVar psv = gfc.sv_psy;
     if (chn < 2) {
-        /*no loudness for mid/side ch */
+      /*no loudness for mid/side ch */
       gfc.ov_psy.loudness_sq[gr_out][chn] = psv.loudness_sq_save[chn];
       psv.loudness_sq_save[chn] = psycho_loudness_approx(fftenergy, gfc.ATH.eql_w);
     }
@@ -856,9 +856,9 @@ final class Jpsymodel {
         final float v = en_short[i];
         final float m = (u >= v ? u : v);
         if (m < 40000) {
-            /* (2) */
+          /* (2) */
           if (u < 1.7f * v && v < 1.7f * u) {
-              /* (1) */
+            /* (1) */
             if (i == 1 && ns_attacks_chn[0] <= ns_attacks_chn[i]) {
               ns_attacks_chn[0] = 0;
             }
@@ -1377,7 +1377,7 @@ final class Jpsymodel {
     final int ns_attacks[][] =
         new int[4]
             [4]; // java: already zeroed = { {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}
-                 // };
+    // };
     final boolean uselongblock[] = new boolean[2];
 
     /* chn=2 and 3 = Mid and Side channels */
@@ -1481,7 +1481,7 @@ final class Jpsymodel {
               t2 = NS_INTERP(prev_thm, thmm, NS_PREECHO_ATT2 * pcfact);
             } else if ((sblock == 0 && last_attacks_chn == 3)
                 || (sblock > 0 && ns_attacks_chn[sblock - 1] == 3)) {
-                /* 2nd preceeding block */
+              /* 2nd preceeding block */
               switch (sblock) {
                 case 0:
                   prev_thm = last_thm_chn_s[sb][1];
@@ -2038,7 +2038,7 @@ final class Jpsymodel {
      *  we want to decrease the ATH by 12 dB per second
      */
     final float frame_duration = (576.f * cfg.mode_gr / sfreq);
-    gfc.ATH.decay = (float) Math.pow(10., (float) (-12.f / 10.f * frame_duration));
+    gfc.ATH.decay = (float) Math.pow(10., -12.f / 10.f * frame_duration);
     gfc.ATH.adjust_factor = 0.01f; /* minimum, for leading low loudness */
     gfc.ATH.adjust_limit = 1.0f; /* on lead, allow adjust up to maximum */
 
@@ -2051,12 +2051,12 @@ final class Jpsymodel {
         /* convert ATH dB to relative power (not dB) */
         /*  to determine eql_w */
         freq += freq_inc;
-        gfc.ATH.eql_w[i] = 1.f / (float) Math.pow(10., (float) (Jutil.ATHformula(cfg, freq) / 10f));
+        gfc.ATH.eql_w[i] = 1.f / (float) Math.pow(10., Jutil.ATHformula(cfg, freq) / 10f);
         eql_balance += gfc.ATH.eql_w[i];
       }
       eql_balance = 1.0f / eql_balance;
       for (int i = Jencoder.BLKSIZE / 2; --i >= 0; ) {
-          /* scale weights */
+        /* scale weights */
         gfc.ATH.eql_w[i] *= eql_balance;
       }
     }

@@ -200,7 +200,7 @@ final class JABR_iteration_loop extends Jquantize /* implements Jiteration_loop 
         final Jgr_info cod_info = tt_gr[ch];
 
         if (cod_info.block_type != Jencoder.SHORT_TYPE) {
-            /* NORM, START or STOP type */
+          /* NORM, START or STOP type */
           /* adjust = 1.28/(1+exp(3.5-pe[gr][ch]/300.))-0.05; */
           adjust = 0;
           masking_lower_db = gfc.sv_qnt.mask_adjust - adjust;

@@ -229,7 +229,7 @@ public final class JVbrTag {
         (cfg.samplerate < 16000)
             ? 0
             : 1); // ( buffer[1] = (buffer[1] << 1) | ( ((cfg.samplerate_out < 16000) ? 0 : 1) &
-                  // ~(-1 << 1) ) )
+    // ~(-1 << 1) ) )
     SHIFT_IN_BITS_VALUE(
         buffer,
         1,
@@ -244,7 +244,7 @@ public final class JVbrTag {
         (!cfg.error_protection)
             ? 1
             : 0); // ( buffer[1] = (buffer[1] << 1) | ( ((!cfg.error_protection) ? 1 : 0) & ~(-1 <<
-                  // 1) ) )
+    // 1) ) )
 
     SHIFT_IN_BITS_VALUE(
         buffer,
@@ -256,7 +256,7 @@ public final class JVbrTag {
         2,
         2,
         cfg.samplerate_index); // ( buffer[2] = (buffer[2] << 2) | ( cfg.samplerate_index & ~(-1 <<
-                               // 2) ) )
+    // 2) ) )
     SHIFT_IN_BITS_VALUE(buffer, 2, 1, 0); // ( buffer[2] = (buffer[2] << 1) | ( 0 & ~(-1 << 1) ) )
     SHIFT_IN_BITS_VALUE(
         buffer,
@@ -671,7 +671,7 @@ public final class JVbrTag {
         }
       default:
         {
-            /*vbr modes */
+          /*vbr modes */
           nABRBitrate = Jtables.bitrate_table[cfg.version][cfg.vbr_min_bitrate_index];
         }
     }

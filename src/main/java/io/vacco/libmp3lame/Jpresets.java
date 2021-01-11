@@ -308,7 +308,7 @@ final class Jpresets {
     gfp.internal_flags.cfg.minval = set.minval;
     gfp.internal_flags.cfg.ATHfixpoint = set.ath_fixpoint;
     {
-        /* take care of gain adjustments */
+      /* take care of gain adjustments */
       x = Math.abs(gfp.scale);
       final float y = (x > 0.f) ? (10.f * (float) Math.log10(x)) : 0.f;
       gfp.internal_flags.cfg.ATHfixpoint = set.ath_fixpoint - y;

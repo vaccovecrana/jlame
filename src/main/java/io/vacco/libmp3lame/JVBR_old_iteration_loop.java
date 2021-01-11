@@ -65,7 +65,7 @@ final class JVBR_old_iteration_loop extends Jquantize /* implements Jiteration_l
 
         float masking_lower_db;
         if (cod_info.block_type != Jencoder.SHORT_TYPE) {
-            /* NORM, START or STOP type */
+          /* NORM, START or STOP type */
           adjust = 1.28f / (1f + (float) Math.exp((double) (3.5f - pe_gr[ch] / 300.f))) - 0.05f;
           masking_lower_db = sv_qnt.mask_adjust - adjust;
         } else {

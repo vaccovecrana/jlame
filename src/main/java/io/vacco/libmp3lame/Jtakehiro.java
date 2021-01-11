@@ -310,7 +310,7 @@ final class Jtakehiro {
           accumulate01 = 0;
         }
       } else {
-          /*should compute this part */
+        /*should compute this part */
         int l = cod_info.width[sfb];
 
         if ((j + cod_info.width[sfb]) > cod_info.max_nonzero_coeff) {
@@ -382,12 +382,12 @@ final class Jtakehiro {
       }
     }
     if (accumulate != 0) {
-        /*last data part */
+      /*last data part */
       quantize_lines_xrpow(accumulate, istep, xp, acc_xp, pi, acc_iData);
       accumulate = 0;
     }
     if (accumulate01 != 0) {
-        /*last data part */
+      /*last data part */
       quantize_lines_xrpow_01(accumulate01, istep, xp, acc_xp, pi, acc_iData);
       accumulate01 = 0;
     }
@@ -984,7 +984,7 @@ final class Jtakehiro {
         final int c = slen1_tab[i] * c1 + slen2_tab[i] * c2;
         if (gi.part2_length > c) {
           gi.part2_length = c;
-          gi.scalefac_compress = (int) i;
+          gi.scalefac_compress = i;
         }
       }
     }
@@ -1136,7 +1136,7 @@ final class Jtakehiro {
         tab = scale_mixed;
       }
     } else {
-        /* block_type == 1,2,or 3 */
+      /* block_type == 1,2,or 3 */
       tab = scale_long;
       if (!cod_info.preflag) {
         for (sfb = 11; sfb < Jencoder.SBPSY_l; sfb++) {

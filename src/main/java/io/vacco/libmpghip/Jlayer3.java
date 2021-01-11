@@ -681,7 +681,7 @@ final class Jlayer3 {
     } // else {
     final int scfsi = gr_infos.scfsi;
     if (scfsi < 0) {
-        /* scfsi < 0 => granule == 0 */
+      /* scfsi < 0 => granule == 0 */
       int i = 11 + scfoffset;
       do {
         scf[scfoffset++] = mp.getbits_fast(num0);
@@ -1699,7 +1699,7 @@ final class Jlayer3 {
       final short[] shortIdx = bi.shortIdx; // java
       int lwin = 0;
       do {
-          /* process each window */
+        /* process each window */
         /* get first band with zero values */
         int sfb = gr_infos.maxband[lwin]; /* sfb is minimal 3 for mixed mode */
         if (sfb > 3) {
@@ -1829,7 +1829,7 @@ final class Jlayer3 {
         int xr2 = xr1; // xr1[ xr2 ]
 
         for (int ss = 7; ss >= 0; ss--) {
-            /* upper and lower butterfly inputs */
+          /* upper and lower butterfly inputs */
           final float bu = xr[--xr2], bd = xr[xr1];
           xr[xr2] = (bu * cs[csoffset]) - (bd * ca[caoffset]);
           xr[xr1++] = (bd * cs[csoffset++]) + (bu * ca[caoffset++]);
@@ -2433,7 +2433,7 @@ final class Jlayer3 {
     int single = frame.single;
 
     if (stereo == 1) {
-        /* stream is mono */
+      /* stream is mono */
       single = 0;
     }
 
@@ -2488,7 +2488,7 @@ final class Jlayer3 {
     final float[] hybridOut0 = hybridOut[0], hybridOut1 = hybridOut[1]; // java
     int stereo1;
     if (stereo == 1) {
-        /* stream is mono */
+      /* stream is mono */
       stereo1 = 1;
       single = 0;
     } else if (single >= 0) {

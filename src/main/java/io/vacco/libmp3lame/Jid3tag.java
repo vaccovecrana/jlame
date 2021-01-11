@@ -474,7 +474,7 @@ public final class Jid3tag {
         return -1;
       } /* number out of range */
       if (num >= 0) {
-          /* common genre found  */
+        /* common genre found  */
         gfc.tag_spec.flags |= CHANGED_FLAG;
         gfc.tag_spec.genre_id3v1 = num;
         copyV1ToV2(gfp, ID_GENRE, genre_names[num]);
