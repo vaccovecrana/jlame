@@ -397,16 +397,7 @@ public final class Jmpg123 extends Jmpstr_tag {
     mSkipStart = 0;
     return mNumSamplesUsed - mSkipEnd;
   }
-  /**
-   * @param buffer0
-   * @param buffer1
-   * @param samples
-   * @param b
-   * @param off
-   * @param sampleSize
-   * @param isSigned
-   * @param isBigEndian
-   */
+
   private final void convert(final float[] buffer, final int samples, final byte[] b, int off) {
     if (mBytesPerSample == 2) {
       if (mIsSigned) {
@@ -622,7 +613,7 @@ public final class Jmpg123 extends Jmpstr_tag {
     return 0;
   }
   /**
-   * @param buffer a buffer to hold packed PCM data for return
+   * @param b a buffer to hold packed PCM data for return
    * @param off the start offset in array <code>buffer</code> at which the data is written.
    * @param len the byte length requested to be placed into buffer
    */
