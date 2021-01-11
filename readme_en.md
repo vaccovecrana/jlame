@@ -2,6 +2,8 @@
 
 Java versions of the Lame mp3 codec libraries.
 
+http://dmilvdv.narod.ru/Apps/mp3_codec.html
+
 ## Conformity
 
 - `Lame-3.100`
