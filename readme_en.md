@@ -13,8 +13,6 @@ Codec only
 + examples
 + java spi interface
 
-[![Download](https://api.bintray.com/packages/vaccovecrana/vacco-oss/jlame/images/download.svg) ](https://bintray.com/vaccovecrana/vacco-oss/jlame/_latestVersion)
-
 ```groovy
 dependencies {
   compile 'io.vacco.jlame:jlame:<VERSION>'
