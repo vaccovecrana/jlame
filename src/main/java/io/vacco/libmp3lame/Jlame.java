@@ -496,10 +496,10 @@ public final class Jlame {
    *  6. set mode based on compression ratio
    *
    *  The remaining code is much simpler - it just sets options
-   *  based on the mode & compression ratio:
+   *  based on the mode &amp; compression ratio:
    *
    *   set allow_diff_short based on mode
-   *   select lowpass filter based on compression ratio & mode
+   *   select lowpass filter based on compression ratio &amp; mode
    *   set the bitrate index, and min/max bitrates for VBR modes
    *   disable VBR tag if it is not appropriate
    *   initialize the bitstream
@@ -1592,9 +1592,9 @@ public final class Jlame {
    *
    * <p>set mp3buf_size = 0 and LAME will not check if mp3buf_size is large enough.
    *
-   * <p>NOTE: if gfp->num_channels=2, but gfp->mode = 3 (mono), the L & R channels will be averaged
-   * into the L channel before encoding only the L channel This will overwrite the data in
-   * buffer_l[] and buffer_r[].
+   * <p>NOTE: if gfp -&gt; num_channels=2, but gfp -&gt; mode = 3 (mono), the L &amp; R channels
+   * will be averaged into the L channel before encoding only the L channel This will overwrite the
+   * data in buffer_l[] and buffer_r[].
    */
   public static final int lame_encode_buffer(
       final Jlame_global_flags gfp,
@@ -1806,8 +1806,8 @@ public final class Jlame {
   }
 
   /**
-   * as above, but input has L & R channel data interleaved. NOTE: num_samples = number of samples
-   * in the L (or R) channel, not the total number of samples in pcm[]
+   * as above, but input has L &amp; R channel data interleaved. NOTE: num_samples = number of
+   * samples in the L (or R) channel, not the total number of samples in pcm[]
    */
   public static final int lame_encode_buffer_interleaved(
       final Jlame_global_flags gfp,

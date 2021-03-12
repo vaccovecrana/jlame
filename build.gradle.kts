@@ -1,7 +1,7 @@
 plugins { id("io.vacco.oss") version "1.0.0" }
 
 group = "io.vacco.jlame"
-version = "3.100.0"
+version = "3.100.1"
 
 configure<io.vacco.oss.CbPluginProfileExtension> {
   addJ8Spec()

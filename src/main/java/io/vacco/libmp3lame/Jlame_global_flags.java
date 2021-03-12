@@ -1052,8 +1052,8 @@ public final class Jlame_global_flags { // struct lame_global_struct
   }*/
 
   /**
-   * Allow blocktypes to differ between channels. default: 0 for jstereo => block types coupled 1
-   * for stereo => block types may differ
+   * Allow blocktypes to differ between channels. default: 0 for jstereo =&gt; block types coupled 1
+   * for stereo =&gt; block types may differ
    */
   public final int lame_set_allow_diff_short(final boolean allow_diff_short) {
     if (is_lame_global_flags_valid()) {

@@ -10,7 +10,7 @@ import java.util.Arrays;
  * <pre>
  * Jmpg123 decoder = new Jmpg123();
  * decoder.InitMP3();
- * if( decoder.open( stream ) < 0 ) {
+ * if( decoder.open( stream ) &lt; 0 ) {
  *     decoder.ExitMP3();
  * }
  * </pre>

@@ -20,7 +20,7 @@ public final class EncoderFileFormatType extends AudioFileFormat.Type {
    *
    * @param name file type name.
    * @param extension file type extension.
-   * @param type stream type: vbr, cbr or abr.
+   * @param streamType stream type: vbr, cbr or abr.
    * @param parameter a parameter of the stream type.
    */
   public EncoderFileFormatType(
